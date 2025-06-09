@@ -35,7 +35,7 @@ const Checkout = () => {
           </p>
           <p className="text-xl font-semibold mb-2">Total Amount: ₦{total}</p>
           <p className="mb-6 text-gray-600">
-            (This is just a placeholder. Payment integration coming soon!)
+             Payment integration coming soon!
           </p>
             <Link
             to="/thank-you"

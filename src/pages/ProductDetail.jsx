@@ -21,7 +21,8 @@ const ProductDetail = () => {
 
   return (
     <div className="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-      <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded mb-4" />
+      {`product/${product.id}`}<img src={product.image} alt={product.name} className="w-full h-40 object-contain mb-2 rounded bg-white"/>
+
       <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
       <p className="text-blue-600 font-bold text-lg mb-4">₦{product.price}</p>
       <p className="text-gray-700 mb-4">{product.description || "No description available."}</p>

@@ -21,7 +21,9 @@ export const CartProvider = ({ children }) => {
       const exists = prev.find((item) => item.id === product.id);
       if (exists) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       } else {
         return [...prev, { ...product, quantity: 1 }];
@@ -33,7 +35,9 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const clearCart = () => setCartItems([]);
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   const incrementItem = (id) => {
     setCartItems((prev) =>
@@ -53,6 +57,10 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  // Get total number of items in cart
+  const getTotalItems = () =>
+    cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <CartContext.Provider
       value={{
@@ -62,6 +70,7 @@ export const CartProvider = ({ children }) => {
         clearCart,
         incrementItem,
         decrementItem,
+        getTotalItems,
       }}
     >
       {children}

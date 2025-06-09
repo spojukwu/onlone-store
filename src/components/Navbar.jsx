@@ -1,17 +1,61 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
-const Navbar = () => {
+const Navbar = ({ searchQuery, setSearchQuery }) => {
+  const { getTotalItems } = useContext(CartContext);
+
   return (
-    <nav className="bg-gray-800 text-white px-6 py-4 sticky top-0 z-50 shadow">
-      <div className="flex justify-between items-center max-w-6xl mx-auto">
-        <Link to="/" className="text-xl font-bold">🛍️ MyStore</Link>
-        <div className="flex items-center space-x-6">
-          <Link to="/" className="hover:text-gray-300">Home</Link>
-          <Link to="/cart" className="hover:text-gray-300">Cart</Link>
-          <Link to="/checkout" className="hover:text-gray-300">Checkout</Link>
-          <Link to="/about" className="hover:text-gray-300">About</Link>
-          <Link to="/contact" className="hover:text-gray-300">Contact</Link>
-        </div>
+    <nav className="flex flex-wrap items-center justify-between p-4 bg-blue-600 text-white shadow-md">
+      {/* Left: Logo */}
+      <div className="flex-1">
+        <Link to="/" className="text-2xl font-bold hover:text-yellow-300 transition duration-300">
+          🛒 MyStore
+        </Link>
+      </div>
+
+      {/* Center: Search Bar */}
+      <div className="flex-1 flex justify-center">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="px-3 py-2 rounded text-black w-60 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-400"
+        />
+      </div>
+
+      {/* Right: Nav Links */}
+      <div className="flex-1 flex justify-end gap-6 items-center pr-2">
+        <Link
+          to="/products"
+          className="transition duration-300 transform hover:scale-110"
+        >
+          Products
+        </Link>
+        <Link
+          to="/about"
+          className="transition duration-300 transform hover:scale-110"
+        >
+          About
+        </Link>
+        <Link
+          to="/contact"
+          className="transition duration-300 transform hover:scale-110"
+        >
+          Contact
+        </Link>
+        <Link
+          to="/cart"
+          className="relative transition duration-300 transform hover:scale-110"
+        >
+          <span role="img" aria-label="cart">🛒</span>
+          {getTotalItems() > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              {getTotalItems()}
+            </span>
+          )}
+        </Link>
       </div>
     </nav>
   );
