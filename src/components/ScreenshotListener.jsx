@@ -41,7 +41,7 @@ const ScreenshotListener = () => {
       const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
       console.log("Heard:", transcript);
       if (transcript.includes("take screenshot")) {
-        html2canvas(document.documentElement, {
+        html2canvas(document.body, {
           width: window.innerWidth,
           height: window.innerHeight,
           windowWidth: window.innerWidth,
@@ -49,25 +49,10 @@ const ScreenshotListener = () => {
           scrollX: window.scrollX,
           scrollY: window.scrollY
         }).then((canvas) => {
-          // Crop to viewport
-          const croppedCanvas = document.createElement("canvas");
-          croppedCanvas.width = window.innerWidth;
-          croppedCanvas.height = window.innerHeight;
-          const ctx = croppedCanvas.getContext("2d");
-          ctx.drawImage(
-            canvas,
-            window.scrollX,
-            window.scrollY,
-            window.innerWidth,
-            window.innerHeight,
-            0,
-            0,
-            window.innerWidth,
-            window.innerHeight
-          );
+          // The canvas will match the visible viewport
           const link = document.createElement("a");
           link.download = "screenshot.png";
-          link.href = croppedCanvas.toDataURL();
+          link.href = canvas.toDataURL();
           link.click();
         });
       }
