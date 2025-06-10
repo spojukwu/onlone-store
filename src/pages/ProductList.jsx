@@ -28,8 +28,8 @@ const ProductList = ({ searchQuery = "" }) => {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Products</h2>
+    <div className="p-4 bg-white dark:bg-gray-900 min-h-screen">
+      <h2 className="text-2xl font-bold mb-4 dark:text-white">Products</h2>
 
       {paginatedProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -38,7 +38,9 @@ const ProductList = ({ searchQuery = "" }) => {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-500">No products found for "{searchQuery}"</p>
+        <p className="text-center text-gray-700 dark:text-gray-200">
+          No products found for "{searchQuery}"
+        </p>
       )}
 
       <div className="flex justify-center mt-6 gap-2">
@@ -46,7 +48,10 @@ const ProductList = ({ searchQuery = "" }) => {
           <button
             key={idx + 1}
             onClick={() => setCurrentPage(idx + 1)}
-            className={`px-3 py-1 rounded ${currentPage === idx + 1 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
+            className={`px-3 py-1 rounded 
+              ${currentPage === idx + 1 
+                ? "bg-blue-600 text-white" 
+                : "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200"}`}
           >
             {idx + 1}
           </button>

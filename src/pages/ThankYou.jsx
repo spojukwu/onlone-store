@@ -25,7 +25,6 @@ const ThankYou = () => {
     const intervalId = setInterval(shootConfetti, 200);
     const timeoutId = setTimeout(() => {
       clearInterval(intervalId);
-      // Optional: Add a final burst or cleanup if needed
     }, 2000);
 
     // Redirect after 5 seconds
@@ -41,11 +40,13 @@ const ThankYou = () => {
   }, [clearCart, navigate]);
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded shadow mt-10 text-center">
-      <h2 className="text-3xl font-bold mb-4">🎉 Thank You!</h2>
-      <p className="text-lg mb-2">Your order has been successfully placed.</p>
-      <p className="text-gray-600 mb-6">You’ll be redirected shortly...</p>
-      <p className="text-sm text-gray-400">(If not, <a href="/" className="text-blue-600">click here</a>.)</p>
+    <div className="max-w-xl mx-auto p-6 bg-white dark:bg-gray-900 rounded shadow mt-10 text-center">
+      <h2 className="text-3xl font-bold mb-4 dark:text-white">🎉 Thank You!</h2>
+      <p className="text-lg mb-2 dark:text-gray-200">Your order has been successfully placed.</p>
+      <p className="text-gray-600 dark:text-gray-400 mb-6">You’ll be redirected shortly...</p>
+      <p className="text-sm text-gray-400 dark:text-gray-500">
+        (If not, <a href="/" className="text-blue-600 dark:text-blue-400 underline">click here</a>.)
+      </p>
     </div>
   );
 };
