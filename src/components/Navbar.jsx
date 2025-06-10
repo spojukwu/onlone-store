@@ -8,7 +8,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
   const { isDark, setIsDark } = useContext(ThemeContext); 
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 bg-blue-600 text-white shadow-md">
+    <nav className="flex flex-wrap py-4 items-center justify-between p-2 bg-blue-600 text-white shadow-md">
       {/* Left: Logo */}
       <div className="flex-1">
         <Link to="/" className="text-2xl font-bold hover:text-yellow-300 transition duration-300">
