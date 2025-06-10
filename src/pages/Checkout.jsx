@@ -33,7 +33,7 @@ const Checkout = () => {
           <p className="text-lg mb-4">
             Thank you for shopping with us! 🎉
           </p>
-          <p className="text-xl font-semibold mb-2">Total Amount: ₦{total}</p>
+          <p className="text-xl font-semibold mb-2">Total Amount: ₦{total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
           <p className="mb-6 text-gray-600">
              Payment integration coming soon!
           </p>
