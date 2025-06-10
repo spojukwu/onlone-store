@@ -13,13 +13,14 @@ import homecamera from '../assets/homecamera.jpeg'
 import lessmicrophone from '../assets/lessmicrophone.jpeg'
 import powerbank from '../assets/powerbank.jpeg'
 import smartbulb from '../assets/smartbulb.jpeg'
-import digitalCamera from '../assets/digitalCamera.jpeg'
+import digitalcamera from '../assets/digitalcamera.jpeg'
 import fitnesstracker from '../assets/fitnesstracker.jpeg'
 import smartdoorlock from '../assets/smartdoorlock.jpeg'
 import earbud from '../assets/earbud.jpeg'
 import streaming from '../assets/streaming.jpeg'
 import thermostat from '../assets/thermostat.jpeg'
 import actioncamera from '../assets/actioncamera.jpeg'
+import smartwindow from '../assets/smartwindow.jpeg'
 import earphone from '../assets/earphone.jpeg'
 import desktop from '../assets/desktop.jpeg'
 import presenter from '../assets/presenter.jpeg'
@@ -28,8 +29,16 @@ import dashcam from '../assets/dashcam.jpeg'
 import cleaner from '../assets/cleaner.jpeg'
 import detector from '../assets/detector.jpeg'
 import cablemgt from '../assets/cablemgt.jpeg'
-
-
+import streamcam from '../assets/streamcam.jpeg'
+import smartgarage from '../assets/smartgarage.jpeg'
+import gamemouse from '../assets/gamemouse.jpeg'
+import striplight from '../assets/striplight.jpeg'
+import carcharge from '../assets/carcharge.jpeg'
+import smartbottle from '../assets/smartbottle.jpeg'
+import smartalerm from '../assets/smartalerm.jpeg'
+import smartfeed from '../assets/smartfeed.jpeg'
+import keyboard from '../assets/keyboard.jpeg'
+// This file contains the product data for the online shop.
 const products = [
   {
     id: 1,
@@ -140,7 +149,7 @@ const products = [
     id: 16,
     name: "Canon Digital Camera",
     price: 349999.99,
-    image: digitalCamera,
+    image: digitalcamera,
     description: "High-resolution digital camera for photography enthusiasts."
   },
   {
@@ -195,8 +204,8 @@ const products = [
   {
     id: 24,
     name: "Smart Window Blinds",
-    price: 249.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 80000.00,
+    image: smartwindow,
     description: "Automated blinds controlled via app."
   },
   {
@@ -258,57 +267,57 @@ const products = [
   {
     id: 33,
     name: "Smart Garage Opener",
-    price: 229.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 66400.00,
+    image: smartgarage,
     description: "Open and close your garage remotely."
   },
   {
     id: 34,
     name: "Wireless Gaming Mouse",
     price: 59.99,
-    image: "https://via.placeholder.com/200x150",
+    image: gamemouse,
     description: "High-precision mouse for gaming."
   },
   {
     id: 35,
     name: "LED Strip Lights",
-    price: 29.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 50000.00,
+    image: striplight,
     description: "Colorful LED strip for ambiance."
   },
   {
     id: 36,
     name: "Smart Water Bottle",
-    price: 39.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 13000.00,
+    image: smartbottle,
     description: "Hydrate smarter with LED reminders."
   },
   {
     id: 37,
     name: "Wireless Car Charger",
     price: 34.99,
-    image: "https://via.placeholder.com/200x150",
+    image: carcharge,
     description: "Charge your phone on the go."
   },
   {
     id: 38,
     name: "Smart Alarm Clock",
-    price: 79.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 14000.00,
+    image: smartalerm,
     description: "Wake up with your favorite tunes."
   },
   {
     id: 39,
     name: "Smart Pet Feeder",
-    price: 149.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 18999.00,
+    image: smartfeed,
     description: "Automatically feed your pets."
   },
   {
     id: 40,
     name: "Wireless Office Keyboard",
-    price: 49.99,
-    image: "https://via.placeholder.com/200x150",
+    price: 15000.00,
+    image: keyboard,
     description: "Ergonomic wireless keyboard for work."
   }
 ];
