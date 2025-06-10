@@ -29,7 +29,7 @@ function App() {
             <ScreenshotListener />
             <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-            <div className="flex-1 max-w-6xl mx-auto p-4 w-full pt-20">
+            <div className="flex-1 max-w-6xl mx-auto p-4 w-full pt-24">
               <Suspense fallback={<div className="text-center py-20"><Loading /></div>}>
                 <Routes>
                   <Route path="/" element={<Home searchQuery={searchQuery} />} />
