@@ -66,21 +66,23 @@ const Home = ({ searchQuery }) => {
                     maximumFractionDigits: 2,
                   })}
                 </p>
-                <Link
-                  to={`/product/${product.id}`}
-                  className="mt-2 inline-block bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition-colors"
-                >
-                  View Details
-                </Link>
-                <button
-                  onClick={() => addToCart(product)}
-                  disabled={isInCart}
-                  className={`mt-2 w-full bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 transition-colors ${
-                    isInCart ? "bg-gray-400 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {isInCart ? "Already Added To Cart" : "Add to Cart"}
-                </button>
+                <div className="flex gap-2 mt-2">
+                  <Link
+                    to={`/product/${product.id}`}
+                    className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition-colors text-sm"
+                  >
+                    View Details
+                  </Link>
+                  <button
+                    onClick={() => addToCart(product)}
+                    disabled={isInCart}
+                    className={`bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 transition-colors text-sm ${
+                      isInCart ? "bg-gray-400 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    {isInCart ? "Already To Cart Already" : "Add to Cart"}
+                  </button>
+                </div>
               </div>
             );
           })
