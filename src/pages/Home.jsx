@@ -80,7 +80,7 @@ const Home = ({ searchQuery }) => {
                       isInCart ? "bg-gray-400 cursor-not-allowed" : ""
                     }`}
                   >
-                    {isInCart ? "Already To Cart Already" : "Add to Cart"}
+                    {isInCart ? "Added to cart" : "Add to Cart"}
                   </button>
                 </div>
               </div>
